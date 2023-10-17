@@ -14,7 +14,7 @@ pipeline{
         }
         stage("Check out from SCM"){
             steps{
-                git branch: 'main'
+                git branch: 'main', url: 'https://github.com/tainhoz1991/jenkins-tutorial'
             }
         }
     }
