@@ -17,5 +17,15 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/tainhoz1991/jenkins-tutorial'
             }
         }
+        stage("Building Application"){
+            stages{
+                sh "mvn clean package"
+            }
+        }
+        stage("Testing Application"){
+            stages{
+                sh "mvn test"
+            }
+        }
     }
 }
